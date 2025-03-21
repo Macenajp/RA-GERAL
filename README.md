@@ -1,5 +1,5 @@
 # Raciocínio Algorítmico - PUCPR
-Este repositório contém as atividades da disciplina **Raciocínio Algorítmico**, realizadas durante as primerias semanas curso de Ciência da Computação.
+Este repositório contém as atividades da disciplina **Raciocínio Algorítmico**, realizadas a partir das primerias semanas do curso de Ciência da Computação.
 
 ## 📁 Estrutura de Pastas
 - `/TDE1`: Para os exercícios da primeira lista.

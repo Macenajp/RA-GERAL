@@ -1,3 +1,5 @@
+# Questão 8 da lista
+
 tempo = float(input("Quanto tempo você ficou no estacionamento em minutos: "))
 
 tempoFinal = (tempo - 60)% 15

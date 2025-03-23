@@ -15,4 +15,4 @@ Valor = (tempoFinal2 + tempoFinal3) * 1.50 + 8
 if tempo <= 60:
     print("O valor a ser pago será de R$8,00")
 elif tempo > 60:
-    print("O valor pago será de:", Valor)
+    print("O valor pago será de:", Valor

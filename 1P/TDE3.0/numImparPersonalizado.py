@@ -1,3 +1,4 @@
+# Questão 5 da lista:
 numero = int(input('Insira um número inteiro:'))
 contador = 1
 while contador <= numero:

@@ -1,6 +1,5 @@
 # Trabalho colaborativo 
-## Sobre:
-- Essa pasta é para armazenar indivualmente, o desenvolvimento do trabalho do "Jokenpô".
+Essa pasta é para armazenar indivualmente, o desenvolvimento do trabalho do "Jokenpô".
 
 ## Organização:
 - `/jockenpôPlano.py`: Planejamento e ideal do jogo.

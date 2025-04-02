@@ -16,7 +16,7 @@ while moeda < 1 or moeda > 3:
     moeda = int(input('Qual moeda você quer comprar? '))
     total = float(input('Digite a quantidade desejada: '))
 
-# Resultado final da "compra":
+# Resultado final da "compra" das moedas:
 if moeda  == 1:
     if total < 1000:
         print(f"O valor final é: {total * dolar * 1.05:.2f}")

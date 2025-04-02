@@ -13,7 +13,7 @@ while moeda < 1 or moeda > 3:
     print('2 - Euro')
     print('3 - Libra')
 
-    moeda = int(input('Qual moeda você quer comprar? '))
+    moeda = int(input('Qual moeda você quer deseja comprar? '))
     total = float(input('Digite a quantidade desejada: '))
 
 # Resultado final da "compra" das moedas:

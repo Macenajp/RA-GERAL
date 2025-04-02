@@ -13,6 +13,7 @@ Depois de um determinado número de partidas, terá que aparecer uma pergunta pa
 
 '''
 Modo de jogo:
-Para cada "round", solicitará uma jogada (pedra, tesoura ou papel).
-Depois de um determinado número de jogadas, deverá coletar os dados e apresentar o placar no final da partida.
+- Para cada "round", solicitará uma jogada (pedra, tesoura ou papel).
+- Depois de um determinado número de jogadas, deverá coletar os dados e apresentar o placar no final da partida e indicar o vencedor.
+-  Caso o player queira "continuar", haverá um número determinado de jogadas posteriormente. Se escolher "sair", irá mostrar direto, o placar.
 '''

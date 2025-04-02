@@ -8,7 +8,7 @@ libra = 7.42
 # Escolha da moeda pelo usuário:
 moeda = 0
 while moeda < 1 or moeda > 3:
-    print('Escolha uma moeda para comprar:')
+    print('Escolha uma dessas moedas para comprar:')
     print('1 - Dólar')
     print('2 - Euro')
     print('3 - Libra')

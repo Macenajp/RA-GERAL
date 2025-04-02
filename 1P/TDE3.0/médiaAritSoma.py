@@ -8,5 +8,5 @@ while contador <= 10:
     contador = contador + 1
     soma += entradas
 
-print('Valor total:', soma)
-print('Média dos números:', soma / 10)
+print("Valor total:", soma)
+print("Média dos números:", soma / 10)

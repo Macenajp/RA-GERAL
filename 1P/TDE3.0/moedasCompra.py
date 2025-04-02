@@ -22,7 +22,7 @@ if moeda  == 1:
         print(f"O valor final é: {total * dolar * 1.05:.2f}")
     else:
         print(f"O valor final é: {total * dolar * 1.03:.2f}")
-elif  moeda  ==  2
+elif  moeda  ==  2:
     if total < 1000:
         print(f"O valor final é: {total * euro * 1.05:.2f}")
     else:

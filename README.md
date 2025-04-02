@@ -1,11 +1,11 @@
 # Raciocínio Algorítmico - PUCPR
 Este repositório contém as atividades da disciplina **Raciocínio Algorítmico**, realizadas a partir das primerias semanas do curso de Ciência da Computação.
 
-## 📁 Estrutura de Pastas
+## 📁 Estrutura de Pastas:
 - `/TDE1`: Para os exercícios da primeira lista.
 - `/TDE2`: Para os exercícios da segunda lista.
 
-## 💻 Linguagens Utilizadas
+## 💻 Linguagens Utilizadas:
 - Python
 
 ## 🚀 Objetivo

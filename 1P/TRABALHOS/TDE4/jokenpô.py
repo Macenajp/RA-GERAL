@@ -4,7 +4,7 @@ import random
 # Entrada e dados:
 inicioDoJogo = input("Gostaria de iniciar o jogo (s/n)?: ")
 
-# Gameplay:
+# Gameplay geral:
 if inicioDoJogo == "s":
     print("1 - Humano x Humano")
     print("2 - Humano x Bot")
@@ -13,6 +13,7 @@ else:
     print("Volte logo!")
     exit()
 
+# Gameplay: PLayer X Player:
 jogadaContinuar = int(input("Qual será o modo de jogo? "))
 if jogadaContinuar == 1:
     print("Modalidade selecionada: Humano x Humano")
@@ -53,6 +54,7 @@ if jogadaContinuar == 1:
             print("Humano 2 =", placarHumano2, pontos)
             break
 
+# Gameplay: Player x Bot:
 elif jogadaContinuar == 2:
     print("Modalidade selecionada: Humano x Bot")
     print("Regras do jogo: Pedra ganha da tesoura / Tesoura ganha do papel / Papel ganha da pedra")
@@ -93,6 +95,7 @@ elif jogadaContinuar == 2:
             print("Bot =", placarBot, "pontos")
             break
 
+# Gameplay: Bot x Bot:
 elif jogadaContinuar == 3:
     print("Modalidade selecionada: Bot x Bot")
     print("Regras do jogo: Pedra ganha da tesoura / Tesoura ganha do papel / Papel ganha da pedra")
@@ -127,6 +130,7 @@ elif jogadaContinuar == 3:
         else:
             print("Empate!")
 
+# Finalização do jogo:
         opcao = input("Deseja continuar? (s/n): ")
         if opcao.lower() != "s":
             print("Placar final:")

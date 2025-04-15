@@ -1,9 +1,8 @@
 # Raciocínio Algorítmico - PUCPR
-Este repositório contém as execícios básicos para memorização da disciplina **Raciocínio Algorítmico**, realizadas a partir das primerias semanas do curso de Ciência da Computação.
+Este repositório contém as atividades formativas (para memorização da da metéria) e somantivas da disciplina **Raciocínio Algorítmico**, realizadas a partir das primerias semanas do curso de Ciência da Computação.
 
 ## 📁 Estrutura de Pastas
-- `/Basic`: Para os exercícios básicos c/s IF.
-- `/While`: Para os exercícios com While.
+- `/1P`: Para tudo o que foi desenvolvido no primeiro período.
 
 ## 💻 Linguagens Utilizadas
 - Python

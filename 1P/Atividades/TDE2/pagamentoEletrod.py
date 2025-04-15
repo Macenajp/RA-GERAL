@@ -1,4 +1,4 @@
-# Questão 13 da lista:
+ # Questão 13 da lista:
 preco = float(input("Digite o preço do produto: "))
 
 print("Essas são :")

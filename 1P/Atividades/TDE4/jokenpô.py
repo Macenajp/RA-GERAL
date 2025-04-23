@@ -6,6 +6,7 @@ print("Regras do jogo: Pedra ganha da tesoura / Tesoura ganha do papel / Papel g
 inicioDoJogo = input("Gostaria de iniciar o jogo (s/n)?: ")
 
 # Gameplay geral:
+jogadas = {1: "Pedra", 2: "Papel", 3: "Tesoura"}
 if inicioDoJogo == "s":
     print("1 - Humano x Humano")
     print("2 - Humano x Bot")
@@ -64,7 +65,7 @@ elif jogadaContinuar == 2:
     while True:
         jogadaHumano = int(input("Pedra - 1, Papel - 2 e Tesoura - 3 \nSelecione sua jogada: "))
         jogadaBot = random.randint(1, 3)
-        print("Bot escolheu:", jogadaBot)
+        print("Bot escolheu:", jogadas[jogadaBot])
 
         if jogadaHumano == 1 and jogadaBot == 2:
             print("Bot venceu!")
@@ -105,8 +106,8 @@ elif jogadaContinuar == 3:
     while True:
         jogadaBot1 = random.randint(1, 3)
         jogadaBot2 = random.randint(1, 3)
-        print("Bot 1 escolheu:", jogadaBot1)
-        print("Bot 2 escolheu:", jogadaBot2)
+        print("Bot 1 escolheu:", jogadas[jogadaBot1])
+        print("Bot 2 escolheu:", jogadas[jogadaBot2])
 
         if jogadaBot1 == 1 and jogadaBot2 == 2:
             print("Bot 2 venceu!")

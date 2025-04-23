@@ -42,7 +42,7 @@ if jogadaContinuar == 1:
             print("Humano 2 venceu!")
             placarHumano2 += 1
         elif jogadaHumano1 == 3 and jogadaHumano2 == 2:
-            print("'Humano 1 venceu!")
+            print("Humano 1 venceu!")
             placarHumano1 += 1
         else:
             print("Empate!")
@@ -57,8 +57,7 @@ if jogadaContinuar == 1:
 # Gameplay: Player x Bot:
 elif jogadaContinuar == 2:
     print("Modalidade selecionada: Humano x Bot")
-    print("Regras do jogo: Pedra ganha da tesoura / Tesoura ganha do papel / Papel ganha da pedra")
-
+    
     placarHumano = 0
     placarBot = 0
 

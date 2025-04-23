@@ -1,3 +1,4 @@
+# Jokenpô - Entrega geral do grupo:
 # Biblioteca:
 import random
 

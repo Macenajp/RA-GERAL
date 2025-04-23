@@ -14,7 +14,7 @@ else:
     print("Volte logo!")
     exit()
 
-# Gameplay: PLayer X Player:
+# Gameplay: Player X Player:
 jogadaContinuar = int(input("Qual será o modo de jogo? "))
 if jogadaContinuar == 1:
     print("Modalidade selecionada: Humano x Humano")

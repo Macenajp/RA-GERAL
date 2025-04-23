@@ -1,3 +1,4 @@
+# Feito individualmente:
 # Biblioteca:
 import random
 

@@ -1,8 +1,8 @@
-# Feito individualmente:
 # Biblioteca:
 import random
 
 # Entrada e dados:
+print("Regras do jogo: Pedra ganha da tesoura / Tesoura ganha do papel / Papel ganha da pedra")
 inicioDoJogo = input("Gostaria de iniciar o jogo (s/n)?: ")
 
 # Gameplay geral:
@@ -18,14 +18,13 @@ else:
 jogadaContinuar = int(input("Qual será o modo de jogo? "))
 if jogadaContinuar == 1:
     print("Modalidade selecionada: Humano x Humano")
-    print("Regras do jogo: Pedra ganha da tesoura / Tesoura ganha do papel / Papel ganha da pedra")
 
     placarHumano1 = 0
     placarHumano2 = 0
 
     while True:
         jogadaHumano1 = int(input("Pedra - 1, Papel - 2 e Tesoura - 3 \nSelecione sua jogada (Humano 1): "))
-        jogadaHumano2 = int(input("Pedra - 1, Papel - 2 e Tesoura - 3 \nSelecione sua jogada (Humano 2): "))
+        jogadaHumano2 = int(input("Selecione sua jogada (Humano 2): "))
 
         if jogadaHumano1 == 1 and jogadaHumano2 == 2:
             print("Humano 2 venceu!")
@@ -51,8 +50,8 @@ if jogadaContinuar == 1:
         opcao = input("Deseja continuar? (s/n): ")
         if opcao.lower() != "s":
             print("Placar final:")
-            print("Humano 1 =", placarHumano1, pontos)
-            print("Humano 2 =", placarHumano2, pontos)
+            print(f"Humano 1 = {placarHumano1} pontos")
+            print(f"Humano 2 = {placarHumano2} pontos")
             break
 
 # Gameplay: Player x Bot:
@@ -64,7 +63,7 @@ elif jogadaContinuar == 2:
     placarBot = 0
 
     while True:
-        jogadaHumano = int(input("Pedra - 1, Papel - 2 e Tesoura - 3 \nSelecione sua jogada:"))
+        jogadaHumano = int(input("Pedra - 1, Papel - 2 e Tesoura - 3 \nSelecione sua jogada: "))
         jogadaBot = random.randint(1, 3)
         print("Bot escolheu:", jogadaBot)
 
@@ -92,14 +91,14 @@ elif jogadaContinuar == 2:
         opcao = input("Deseja continuar? (s/n): ")
         if opcao.lower() != "s":
             print("Placar final:")
-            print("Humano =", placarHumano, "pontos")
-            print("Bot =", placarBot, "pontos")
+            print(f"Humano = {placarHumano} pontos")
+            print(f"Bot = {placarBot} pontos")
             break
 
 # Gameplay: Bot x Bot:
 elif jogadaContinuar == 3:
     print("Modalidade selecionada: Bot x Bot")
-    print("Regras do jogo: Pedra ganha da tesoura / Tesoura ganha do papel / Papel ganha da pedra")
+    print("Pedra - 1, Papel - 2 e Tesoura - 3.")
 
     placarBot1 = 0
     placarBot2 = 0
@@ -135,8 +134,8 @@ elif jogadaContinuar == 3:
         opcao = input("Deseja continuar? (s/n): ")
         if opcao.lower() != "s":
             print("Placar final:")
-            print("Bot 1 =", placarBot1, "pontos")
-            print("Bot 2 =", placarBot2, "pontos")
+            print(f"Bot 1 = {placarBot1} pontos")
+            print(f"Bot 2 = {placarBot2} pontos")
             break
 else:
     print("Opção inválida!")

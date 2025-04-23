@@ -13,7 +13,6 @@ entradageral = entrada
 # Gameplay geral:
 while continuar:
 
-    # Jogador x Jogador:
     if entradageral:
         if entrada == 1:
             escolha1 = int(input('JOGADOR 1: escolha entre pedra (1), papel (2) ou tesoura (3): '))
@@ -25,73 +24,77 @@ while continuar:
             escolha1 = random.randint(1, 3)
             escolha2 = random.randint(1, 3)
 
-
     # Jogador 1 (bot) - Pedra:
     if escolha1 == 1 and escolha2 == 2:
+        print('-----------------------------------------------------------------------------------------------------------------')
         print('Jogador 1 escolheu pedra e o jogador 2 escolheu papel.')
         print('Vitória do jogador 2!')
         print('-----------------------------------------------------------------------------------------------------------------')
-        placarJ2 = placarJ2+1
+        placarJ2 = placarJ2 + 1
 
     if escolha1 == 1 and escolha2 == 3:
+        print('-----------------------------------------------------------------------------------------------------------------')
         print('Jogador 1 escolheu pedra e o jogador 2 escolheu tesoura.')
         print('Vitória do jogador 1')
         print('-----------------------------------------------------------------------------------------------------------------')
-        placarJ1 = placarJ1+1
+        placarJ1 = placarJ1 + 1
 
     if escolha1 == 1 and escolha2 == 1:
+        print('-----------------------------------------------------------------------------------------------------------------')
         print('Jogador 1 escolheu pedra e o jogador 2 escolheu pedra.')
         print('Empate!')
         print('-----------------------------------------------------------------------------------------------------------------')
         placarE = placarE + 1
 
-
-    #Jogador 1 (bot) - Papel:
+    # Jogador 1 (bot) - Papel:
     if escolha1 == 2 and escolha2 == 1:
+        print('-----------------------------------------------------------------------------------------------------------------')
         print('Jogador 1 escolheu papel e o jogador 2 escolheu pedra.')
         print('Vitória do jogador 1')
         print('-----------------------------------------------------------------------------------------------------------------')
         placarJ1 += 1
 
     if escolha1 == 2 and escolha2 == 2:
+        print('-----------------------------------------------------------------------------------------------------------------')
         print('Jogador 1 escolheu papel e o jogador 2 escolheu papel.')
         print('Empate!')
         print('-----------------------------------------------------------------------------------------------------------------')
         placarE += 1
 
     if escolha1 == 2 and escolha2 == 3:
+        print('-----------------------------------------------------------------------------------------------------------------')
         print('Jogador 1 escolheu papel e o jogador 2 escolheu tesoura')
         print('Vitória do jogador 2!')
         print('-----------------------------------------------------------------------------------------------------------------')
         placarJ2 += 1
 
-
-    #Jogador 1 (bot) - Tesoura:
+    # Jogador 1 (bot) - Tesoura:
     if escolha1 == 3 and escolha2 == 1:
+        print('-----------------------------------------------------------------------------------------------------------------')
         print('Jogador 1 escolheu tesoura e o jogador 2 escolheu pedra')
         print('Vitória do jogador 2!')
         print('-----------------------------------------------------------------------------------------------------------------')
         placarJ2 += 1
 
     if escolha1 == 3 and escolha2 == 2:
+        print('-----------------------------------------------------------------------------------------------------------------')
         print('Jogador 1 escolheu tesoura, e o jogador 2 escolheu papel')
         print('Vitória do jogador 1!')
         print('-----------------------------------------------------------------------------------------------------------------')
         placarJ1 += 1
 
     if escolha1 == 3 and escolha2 == 3:
+        print('-----------------------------------------------------------------------------------------------------------------')
         print('Jogador 1 escolheu tesoura e o jogador 2 escolheu tesoura')
         print('Empate!')
         print('-----------------------------------------------------------------------------------------------------------------')
         placarE += 1
-
 
     # Finalização da gameplay:
     opcao = input('Deseja continuar (s/n): ')
     if opcao != 's':
         continuar = False
         print('-----------------------------------------------------------------------------------------------------------------')
-
 
 # Conclusão e agradecimentos:
 print('Placar final JOGADOR1:', placarJ1, ', JOGADOR2:', placarJ2, ', EMPATE', placarE)

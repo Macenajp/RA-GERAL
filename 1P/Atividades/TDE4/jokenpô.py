@@ -1,3 +1,6 @@
+# TDE4 - Raciocínio Algorítmico
+# Github: https://github.com/Macenajp
+
 # Biblioteca:
 import random
 
@@ -15,7 +18,7 @@ else:
     print("Volte logo!")
     exit()
 
-# Gameplay: Player X Player:
+# Gameplay: Player x Player:
 jogadaContinuar = int(input("Qual será o modo de jogo? "))
 if jogadaContinuar == 1:
     print("Modalidade selecionada: Humano x Humano")
@@ -58,7 +61,7 @@ if jogadaContinuar == 1:
 # Gameplay: Player x Bot:
 elif jogadaContinuar == 2:
     print("Modalidade selecionada: Humano x Bot")
-    
+
     placarHumano = 0
     placarBot = 0
 
@@ -130,7 +133,7 @@ elif jogadaContinuar == 3:
         else:
             print("Empate!")
 
-# Finalização do jogo:
+        # Finalização do jogo:
         opcao = input("Deseja continuar? (s/n): ")
         if opcao.lower() != "s":
             print("Placar final:")

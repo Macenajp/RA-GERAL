@@ -8,3 +8,4 @@ for linha in range(len(m)):
     for coluna in range(len(m[0])):
         print(m[linha][coluna])        
         #print(m[linha][coluna], end='')  
+    #print('')

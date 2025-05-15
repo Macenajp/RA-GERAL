@@ -1,15 +1,14 @@
-# Questão 3 da list:
+# Questào 3 da lista:
 numeros = []
 
-# Leitura e armazenamento:
+# Lê os três números e armazena na lista
 for i in range(3):
-    valor = float(input(f"Digite o {i + 1}º número: "))  # Alterado para float para maior flexibilidade
+    valor = int(input(f"Digite o {i + 1}º número inteiro: "))
     numeros.append(valor)
 
-produto = numeros[0] * numeros[1]
-if numeros[2] > produto:
-    print(f"O último valor ({numeros[2]}) é maior que o produto dos dois primeiros ({produto})")
-elif numeros[2] < produto:
-    print(f"O último valor ({numeros[2]}) não é maior que o produto dos dois primeiros ({produto})")
+if numeros[0] > numeros[1] + numeros[2]:
+    print(f"O primeiro valor ({numeros[0]}) é maior que a soma dos outros dois ({numeros[1] + numeros[2]})")
+elif numeros[0] < numeros[1] + numeros[2]:
+    print(f"O primeiro valor ({numeros[0]}) é menor que a soma dos outros dois ({numeros[1] + numeros[2]})")
 else:
-    print(f"O último valor ({numeros[2]}) é igual ao produto dos dois primeiros ({produto})")
+    print(f"O primeiro valor ({numeros[0]}) é igual que a soma dos outros dois: ({numeros[1] + numeros[2]})")

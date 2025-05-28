@@ -1,24 +1,28 @@
+# Biblioteca:
 import random
-def numero():
-    return random.randint(1, 50)
 
-def jogadas():
-    resposta = numero()
 
-    print("Descubra o número! - Entre 0 e 50, você tem cinco tentativas.")
-    while chutes > resposta or chutes < resposta:
+def gera():
+    return random.randint(1, 100)
+
+
+# Jogo, chutes e respostas:
+def game():
+    resposta = gera()
+    tentativa = 10
+    print("\Ideia gerado!")
+
+    chute = 10
+    while chute is not resposta:
         tentativa += 1
-        chute = int(input("Qual o seu chute? "))
-        if chute > resposta or chute < resposta:
-            print("Vish, você errou.")
+        chute = int(input("Esse foi o seu chute: "))
+        if chute > resposta:
+            print("Uh! Você errou, o valor é menor que ", chute)
+        elif chute < resposta:
+            print("Uh! Você errou, o valor é maior que ", chute)
         else:
-            print("Você acertou. Parabéns!"
-                  "<=====================>")
-            break
+            print("Parabéns! O número gerado foi ", resposta)
 
-        if resposta > chute:
-            print("Tente um número maior que esse.")
-        else:
-            print("Tente um número menor que esse.")
+
 while True:
-    jogadas()
+    game()

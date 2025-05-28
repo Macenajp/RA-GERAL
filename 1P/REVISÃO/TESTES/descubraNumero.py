@@ -4,8 +4,6 @@ def numero():
 
 def jogadas():
     resposta = numero()
-    tentativa = 5
-    chutes = 5
 
     print("Descubra o número! - Entre 0 e 50, você tem cinco tentativas.")
     while chutes > resposta or chutes < resposta:

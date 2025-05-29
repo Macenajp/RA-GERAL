@@ -9,7 +9,7 @@ def funcao2(x):
 def funcao3(x):
     s = 0
     for i in range(x):
-        s += 1
+        s += i
     return funcao1(s, x)
 
 a = 3

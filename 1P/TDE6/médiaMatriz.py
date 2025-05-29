@@ -4,8 +4,7 @@ def main():
 
     maiores = [max(coluna) for coluna in zip(*matriz)]
 
-    media = sum(maiores) / 4     # Calcula a média
-
+    media = sum(maiores) / 4     
     print("\nMatriz:")
     for linha in matriz:
         print(*linha, sep='\t')

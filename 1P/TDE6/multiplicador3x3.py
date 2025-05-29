@@ -13,7 +13,6 @@ print("-=" * 30)
 multiplicação = int(input("Escolha um numero que ira multiplicar toda matriz"))
 print("-=" * 30)
 
-
 print("Matriz multiplicada")
 for LM in range (0,3):
     for CM in range (0,3):

@@ -1,3 +1,4 @@
+# Exercício 3 - TDE6
 import random
 
 numeros_unicos = random.sample(range(100, 1000), 16)

@@ -8,7 +8,8 @@ itens = [[1, 3.75, 2],
 
 produtos = ('Coca-cola', 'Pepsi', 'Monster', 'Café', 'Redbull')
 estoque_cedulas = {
-    #Nota/moeda:        Quantidade de cada:
+    # Aqui eu coloquei o seguinte: uma nota de 200, e todas as moedas abaixo de 1 real, pois o troco vai estar sempre correto - a não ser que ou as notas ou as cédulas acabem.
+    # Nota/moeda:       Quantidade de cada:
     200:                1,
     100:                3,
     50:                 4,
@@ -46,7 +47,7 @@ def verificar_produto(indice):
         return False
 
 def pagamento_parcial(indice):
-    valor_produto = float(itens[indice][1])
+    valor_produto = float(itens[indice][1])                                     # Alterei aqui - troquei o "int" pelo "float" pra poder mostrar os centavos também
     acumulado = 0
     print(f'Valor do produto: R${valor_produto}')
 
@@ -67,8 +68,8 @@ def pagamento_parcial(indice):
 
 
 def calcular_troco(troco):
-    cedulas = [100, 50, 20, 10, 5, 2, 1, 0.50, 0.25, 0.10, 0.05, 0.01]
-    troco_restante = troco
+    cedulas = [200, 100, 50, 20, 10, 5, 2, 1, 0.50, 0.25, 0.10, 0.05, 0.01]     # Aqui só adicionei as notas e moedas que inseri lá em cima
+    troco_restante = troco                                                      # variável que vai facilitar o cálculo
     print("\nSeu troco:")
 
     for cedula in cedulas:
@@ -79,11 +80,11 @@ def calcular_troco(troco):
                 troco_restante -= qtd * cedula
                 estoque_cedulas[cedula] -= qtd
 
-    if troco_restante < 0:                                              # Aqui troquei o ">" pelo "<", pois estava apresentando msg de erro, mesmo com o troco certo
+    if troco_restante < 0:                                                      # Aqui troquei o ">" pelo "<", pois estava apresentando msg de erro, mesmo com o troco certo
         print("ERRO: Não há cédulas suficientes para o troco completo!")
         return False
 
-    return True
+    return True                                                                 # Informa que ocorreu tudo certo e não teve erro no troco
 
     print("Seu troco:")
     for cedula in cedulas:
@@ -92,12 +93,12 @@ def calcular_troco(troco):
             if qtd > 0 and estoque_cedulas[cedula] >= qtd:
                 print(f"{qtd}x R${cedula}")
                 troco -= qtd * cedula
-                estoque_cedulas[cedula] -= qtd                          #Atualiza o estoque
+                estoque_cedulas[cedula] -= qtd                                  # Aq atualiza o estoque do dinheiro
 
     return True
 
 def verificar_pagamento(indice, valor_pago):
-    valor_produto = float(itens[indice][1])
+    valor_produto = float(itens[indice][1])                                     # Troquei aqui também, tirei o "int" e coloquei o "float"
     time.sleep(3)
     if valor_pago >= valor_produto:
         troco = valor_pago - valor_produto
@@ -106,7 +107,7 @@ def verificar_pagamento(indice, valor_pago):
             if not sucesso:
                 print("\n** COMPRA CANCELADA ** (Faltou R$", troco,")")
                 print("Por favor, retire seu dinheiro.")
-                return                                                  #Encerra a função sem entregar o produto
+                return                                                          # Encerra a função sem entregar o produto
 
         print('-' * 20)
         print('Retirando o produto...')

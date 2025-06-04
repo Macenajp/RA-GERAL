@@ -1,7 +1,7 @@
 # Tudo o que alterei basicamente, foi comentado, fora isso, só dei uma organizada no código:
-
 # Biblioteca:
 import time
+
 
 # Variáveis para os produtos da máqoina e do dinheiro para o troco do usuário:
 itens = [[1, 3.75, 2],
@@ -29,6 +29,7 @@ estoque_cedulas = {
     0.01:               50
 }
 
+
 # Escolha do produto pelo usuário:
 def escolha_produto():
     indice = 0
@@ -41,6 +42,7 @@ def escolha_produto():
     escolha = int(input('Qual bebida você quer comprar? '))
     return escolha
 
+
 # Verifica se tem o produto escolhido no estoque:
 def verificar_produto(indice):
     if 0 <= indice < len(produtos):
@@ -51,6 +53,7 @@ def verificar_produto(indice):
     else:
         print('Produto inválido.')
         return False
+
 
 # Pagamento do usuário - antes do recebimento do troco:
 def pagamento_parcial(indice):
@@ -72,6 +75,7 @@ def pagamento_parcial(indice):
 
     print(f'Pagamento completo. Total pago: R${acumulado}')
     return acumulado
+
 
 # Cálculo do troco e atualização do estoque após isso:
 def calcular_troco(troco):

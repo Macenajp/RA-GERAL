@@ -40,7 +40,8 @@ def verificar_produto(indice):
     else:
         print('Produto inválido.')
         return False
-             
+
+
 # Pagamento do usuário - antes do recebimento do troco:
 def pagamento_parcial(indice):
     valor_produto = float(itens[indice][1])                                     # Alterei aqui - troquei o "int" pelo "float" pra poder mostrar os centavos também

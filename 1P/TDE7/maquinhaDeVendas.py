@@ -1,5 +1,9 @@
+# Tudo o que alterei basicamente, foi comentado, fora isso, só dei uma organizada no código:
+
+# Biblioteca:
 import time
 
+# Variáveis para os produtos da máqoina e do dinheiro para o troco do usuário:
 itens = [[1, 3.75, 2],
          [2, 3.67, 5],
          [3, 9.96, 1],
@@ -25,6 +29,7 @@ estoque_cedulas = {
     0.01:               50
 }
 
+# Escolha do produto pelo usuário:
 def escolha_produto():
     indice = 0
     print('-' * 20)
@@ -36,6 +41,7 @@ def escolha_produto():
     escolha = int(input('Qual bebida você quer comprar? '))
     return escolha
 
+# Verifica se tem o produto escolhido no estoque:
 def verificar_produto(indice):
     if 0 <= indice < len(produtos):
         estoque = itens[indice][2]
@@ -46,6 +52,7 @@ def verificar_produto(indice):
         print('Produto inválido.')
         return False
 
+# Pagamento do usuário - antes do recebimento do troco:
 def pagamento_parcial(indice):
     valor_produto = float(itens[indice][1])                                     # Alterei aqui - troquei o "int" pelo "float" pra poder mostrar os centavos também
     acumulado = 0
@@ -66,7 +73,7 @@ def pagamento_parcial(indice):
     print(f'Pagamento completo. Total pago: R${acumulado}')
     return acumulado
 
-
+# Cálculo do troco e atualização do estoque após isso:
 def calcular_troco(troco):
     cedulas = [200, 100, 50, 20, 10, 5, 2, 1, 0.50, 0.25, 0.10, 0.05, 0.01]     # Aqui só adicionei as notas e moedas que inseri lá em cima
     troco_restante = troco                                                      # variável que vai facilitar o cálculo
@@ -97,6 +104,8 @@ def calcular_troco(troco):
 
     return True
 
+
+# Verificação do pagamento:
 def verificar_pagamento(indice, valor_pago):
     valor_produto = float(itens[indice][1])                                     # Troquei aqui também, tirei o "int" e coloquei o "float"
     time.sleep(3)

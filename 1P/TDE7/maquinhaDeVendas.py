@@ -11,23 +11,10 @@ itens = [[1, 3.75, 2],
          [5, 13.99, 2]]
 
 produtos = ('Coca-cola', 'Pepsi', 'Monster', 'Café', 'Redbull')
-estoque_cedulas = {
-    # Aqui eu coloquei o seguinte: uma nota de 200, e todas as moedas abaixo de 1 real, pois o troco vai estar sempre correto - a não ser que ou as notas ou as cédulas acabem.
-    # Nota/moeda:       Quantidade de cada:
-    200:                1,
-    100:                3,
-    50:                 4,
-    20:                 5,
-    10:                 10,
-    5:                  12,
-    2:                  10,
-    1:                  20,
-    0.50:               25,
-    0.25:               25,
-    0.10:               50,
-    0.05:               50,
-    0.01:               50
-}
+# Aqui eu coloquei o seguinte: uma nota de 200, e todas as moedas abaixo de 1 real, pois o troco vai estar sempre correto - a não ser que ou as notas ou as cédulas acabem.
+# Nota/moeda:
+dinheiro_valores = [200, 100, 50, 20, 10, 5, 2, 1, 0.50, 0.25, 0.10, 0.05, 0.01]    # Notas e moedas que estão na máquina para o troco
+dinheiro_quantidade = [1, 3, 4, 5, 10, 12, 10, 20, 25, 25, 50, 50, 50]              # Quantidade de cada nota/moeda
 
 
 # Escolha do produto pelo usuário:
@@ -53,8 +40,7 @@ def verificar_produto(indice):
     else:
         print('Produto inválido.')
         return False
-
-
+             
 # Pagamento do usuário - antes do recebimento do troco:
 def pagamento_parcial(indice):
     valor_produto = float(itens[indice][1])                                     # Alterei aqui - troquei o "int" pelo "float" pra poder mostrar os centavos também
@@ -79,26 +65,26 @@ def pagamento_parcial(indice):
 
 # Cálculo do troco e atualização do estoque após isso:
 def calcular_troco(troco):
-    cedulas = [200, 100, 50, 20, 10, 5, 2, 1, 0.50, 0.25, 0.10, 0.05, 0.01]     # Aqui só adicionei as notas e moedas que inseri lá em cima
     troco_restante = troco                                                      # variável que vai facilitar o cálculo
     print("\nSeu troco:")
 
-    for cedula in cedulas:
+    for i in range(len(dinheiro_valores)):
+        cedula = dinheiro_valores[i]
         if troco_restante >= cedula:
             qtd = int(troco_restante // cedula)
-            if qtd > 0 and estoque_cedulas[cedula] >= qtd:
+            if qtd > 0 and dinheiro_quantidade[i] >= qtd:
                 print(f"{qtd}x R${cedula:.2f}")
                 troco_restante -= qtd * cedula
-                estoque_cedulas[cedula] -= qtd
+                dinheiro_quantidade[i] -= qtd
 
-    if troco_restante < 0:                                                      # Aqui troquei o ">" pelo "<", pois estava apresentando msg de erro, mesmo com o troco certo
+    if troco_restante < 0:                                                      # Aqui troquei o ">" pelo "<", pois estava apresentando msg de erro, mesmo com o troco cert
         print("ERRO: Não há cédulas suficientes para o troco completo!")
         return False
 
     return True                                                                 # Informa que ocorreu tudo certo e não teve erro no troco
 
     print("Seu troco:")
-    for cedula in cedulas:
+    for cedula in dinheiro:
         if troco >= cedula:
             qtd = troco // cedula
             if qtd > 0 and estoque_cedulas[cedula] >= qtd:
